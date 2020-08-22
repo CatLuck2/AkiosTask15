@@ -68,8 +68,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         //初期化
         checkListForUD = [[String: Any]]()
         
-        //checkListTableViewの表示を更新
-        checkListTableView.deselectRow(at: indexPath, animated: true)
+        //checkListTableViewを更新
         checkListTableView.reloadData()
     }
     /* TableView */
