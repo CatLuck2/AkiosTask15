@@ -69,7 +69,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         checkListForUD = [[String: Any]]()
         
         //checkListTableViewを更新
-        checkListTableView.reloadData()
+        checkListTableView.reloadRows(at: [indexPath], with: .automatic)
     }
     /* TableView */
     
