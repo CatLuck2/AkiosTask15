@@ -59,6 +59,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //チェック状態を反転させる
         checkList[indexPath.row].keyCheck.toggle()
+        
         //UserDefaultに保存
         for i in 0..<checkList.count {
             checkListForUD.append(convertToDictionaryFromTuple(tuple: checkList[i]))
@@ -80,6 +81,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             //チェック項目を追加
             let addCheckItemVC = unwindSegue.source as! AddCheckItem
             checkList.append(addCheckItemVC.checkItem)
+            
             //UserDefaultに保存
             for i in 0..<checkList.count {
                 checkListForUD.append(convertToDictionaryFromTuple(tuple: checkList[i]))
